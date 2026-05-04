@@ -163,6 +163,26 @@ novel-audit/
 
 ---
 
+## ☕ 支持一下
+
+如果这个技能对你有帮助，欢迎：
+
+- ⭐ 给项目点个 **Star**
+- ☕ 赞助一杯咖啡，鼓励持续维护
+
+<table>
+  <tr>
+    <td align="center"><b>微信</b></td>
+    <td align="center"><b>支付宝</b></td>
+  </tr>
+  <tr>
+    <td><img src="assets/wechat-qr.png" width="200" alt="微信赞赏码"></td>
+    <td><img src="assets/alipay-qr.png" width="200" alt="支付宝收款码"></td>
+  </tr>
+</table>
+
+---
+
 ## License
 
 MIT
