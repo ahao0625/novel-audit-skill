@@ -1,6 +1,6 @@
 # novel-audit-skill
 
-网文审计 + 去AI化改写一站式技能，系统性审计网络小说文本，并针对每个问题输出可操作的优化/改写方案。
+网文审计 + 去AI化改写一站式技能，适用于所有支持 SKILL.md 规范的 AI 编程助手。
 
 ---
 
@@ -39,29 +39,27 @@
 
 ---
 
-## 📋 审计报告示例
-
-每次审计输出结构化报告，包含：
-
-1. **综合评分** — 各维度0-10分 + 加权总分 + 发布建议
-2. **高优问题清单** — 🔴 必须修改的问题，每条附改写方案
-3. **中优问题清单** — 🟡 建议修改的问题
-4. **亮点记录** — ✅ 写得好的段落，保留风格
-5. **优先修改建议** — 按优先级排序的修改清单
-
----
-
 ## 安装
 
-将 `novel-audit` 文件夹放入对应平台的 skills 目录：
+将 `novel-audit` 文件夹放入对应平台的技能目录即可：
+
+| 平台 | 安装路径 |
+|------|----------|
+| **WorkBuddy** | `~/.workbuddy/skills/novel-audit/` |
+| **Cursor** | 项目根目录 `.cursor/skills/novel-audit/` 或全局 `~/.cursor/skills/novel-audit/` |
+| **Trae** | 项目根目录 `.trae/skills/novel-audit/` |
+| **Windsurf** | 项目根目录 `.windsurf/skills/novel-audit/` |
+| **Cline** | 项目根目录 `.cline/skills/novel-audit/` |
+| **Roo Code** | 项目根目录 `.roo/skills/novel-audit/` |
+| **其他** | 放入平台支持的 skills 目录即可 |
 
 ```bash
-# WorkBuddy
-cp -r novel-audit ~/.workbuddy/skills/novel-audit
-
-# Cursor / 其他支持 SKILL.md 的平台
-# 将 novel-audit 文件夹放入项目 .cursor/skills/ 目录
+# 克隆仓库后复制到目标目录
+git clone https://github.com/ahao0625/novel-audit-skill.git
+cp -r novel-audit-skill/novel-audit <目标平台skills目录>/
 ```
+
+> **目录结构要求**：安装后须保持 `novel-audit/` 文件夹完整，其中 `SKILL.md`、`references/`、`scripts/` 三个组成部分缺一不可，否则审计时无法加载参考标准。
 
 ---
 
@@ -78,6 +76,18 @@ cp -r novel-audit ~/.workbuddy/skills/novel-audit
 
 支持直接粘贴章节文本，或指定文件路径进行审计。
 支持指定单一维度审计，如：`只检查AI痕迹和对话质量`。
+
+---
+
+## 📋 审计报告示例
+
+每次审计输出结构化报告，包含：
+
+1. **综合评分** — 各维度0-10分 + 加权总分 + 发布建议
+2. **高优问题清单** — 🔴 必须修改的问题，每条附改写方案
+3. **中优问题清单** — 🟡 建议修改的问题
+4. **亮点记录** — ✅ 写得好的段落，保留风格
+5. **优先修改建议** — 按优先级排序的修改清单
 
 ---
 
